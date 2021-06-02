@@ -33,7 +33,7 @@ environ.Env.read_env(
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')  # 'django-insecure-_o!n&^&h638z*0&-nr32629soc!9wkrt1d*b&9dy()!8#_m8vy' / 배포를 할 때 이 KEY를 노출하지 말것 => 새 파일 생성 후 읽어들어오게 하면 됨
+SECRET_KEY = 'django-insecure-_o!n&^&h638z*0&-nr32629soc!9wkrt1d*b&9dy()!8#_m8vy'  # 배포를 할 때 이 KEY를 노출하지 말것 => 새 파일 생성 후 읽어들어오게 하면 됨 , env('SECRET_KEY') 로
 # secret_key 를 env 파일에서 불러온다
 
 # SECURITY WARNING: don't run with debug turned on in production!
