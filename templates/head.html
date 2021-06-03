@@ -1,3 +1,5 @@
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <title>Photomatic</title>
@@ -6,6 +8,10 @@
     <!-- GOOGLE FONTS LINK -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- DEFAULT CSS LINK -->
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">      <!-- static 디렉토리의 base.css로 연결 -->
+
 
 </head>
 
