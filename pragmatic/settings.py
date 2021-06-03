@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'pragmatic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',     # db.sqlite3 라는 파일에 db의 모든 정보가 저장된다
     }
 }
 
