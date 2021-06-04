@@ -1,7 +1,7 @@
 
 .photomatic_header_logo{
     font-family: 'Caveat', cursive;
-    font-size: 3.5rem;
+    font-size: 3.5rem;  /* rem을 쓰는 이유는 반응형웹에 최적화 되었기때문 */
 }
 
 .photomatic_header_button{

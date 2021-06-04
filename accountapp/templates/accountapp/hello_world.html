@@ -9,6 +9,21 @@
     </style>
 
     <div style="height: 20rem; background-color: #F0F8FF; border-radius: 1rem; margin: 2rem;">
-        <h1 class="test">test</h1>
+        <h1 class="test">test</h1>      <!-- 스타일은 클래스로 따로 지정 -->
+
+        <form action="/account/hello_world/" method="post">
+            {% csrf_token %}    <!-- csrf 공격에 대한 방어 -->
+
+            <input type="submit" class="btn btn-primary" value="POST">
+            <!-- Submit 누르면 POST로 넘어간다 -->
+        </form>
+
+        <h1>
+            {{ text }}
+        </h1>
+
     </div>
+
 {% endblock %}
+
+
