@@ -22,8 +22,15 @@
             <!-- Submit 누르면 POST로 넘어간다 -->
             </div>
         </form>
-        {% if hello_world_output %}
-        <h1>{{ text }}</h1>
+
+        {% if hello_world_list %}
+            {% for hello_world in hello_world_list %}       <!-- hello_world_list 안에 있는 hello_world를 찾아서 뭘한다는거야? -->
+
+            <h1>
+                {{ hello_world.text }}
+            </h1>
+
+            {% endfor %}
         {% endif %}
     </div>
 
