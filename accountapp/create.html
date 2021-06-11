@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="text-align: center">
+    <form action = "{% url 'accountapp:create' %}" method="post">
+        {% csrf_token %}    <!-- 내부에 post를 사용하려면 보안을 위하여 이걸 꼭 써줘야함!  -->
+        {{ form }}      <!-- views.py 의 form_class 에서 넘어온다 -->
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+
+{% endblock %}
