@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',   # 210611 15:10 added
     'accountapp',  # 210601 11:05 added
 ]
 
@@ -142,8 +143,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+# 210611 15:00 added
 LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+# added
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
