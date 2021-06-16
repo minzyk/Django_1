@@ -4,8 +4,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, UpdateView
 
+from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 
 # Create your views here.
@@ -41,3 +42,10 @@ class AccountDetailView(DetailView):
     model = User
     context_object_name = 'target_user'
     template_name = 'accountapp/detail.html'
+
+
+class AccountUpdateView(UpdateView):
+    model = User    # Django 기본 제공 user
+    form_class = AccountUpdateForm
+    success_url = reverse_lazy('accountapp:hello_world')    # reverse는 함수형 -> 그대로 사용하면 안되고 클래스형에서는 reverse_lazy 를 사용
+    template_name = 'accountapp/update.html'
