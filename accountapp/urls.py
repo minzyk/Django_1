@@ -15,5 +15,4 @@ urlpatterns = [
     path('detail/<int:pk>', AccountDetailView.as_view(), name='detail'),        # pk(Primary Key)라는 이름의 integer를 받겠다는 뜻
     path('update/<int:pk>', AccountUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', AccountDeleteView.as_view(), name='delete'),
-
 ]

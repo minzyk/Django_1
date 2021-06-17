@@ -8,7 +8,7 @@
         <div class="mb-4">
             <h4>Quit</h4>
         </div>
-        <form action = "{% url 'accountapp:delete' pk=user.pk %}" method="post">
+        <form action = "{% url 'accountapp:delete' pk=target_user.pk %}" method="post">
             {% csrf_token %}    <!-- 내부에 post를 사용하려면 보안을 위하여 이걸 꼭 써줘야함!  -->
             <input type="submit" class="btn btn-dark rounded-pill col-6 mt-4">
         </form>
