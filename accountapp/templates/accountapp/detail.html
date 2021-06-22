@@ -13,7 +13,7 @@
             </h2>
             {% else %}
             <a href="{% url 'profileapp:create' %}">
-                <h2 style="font-family: 'NanumSquareB">
+                <h2 style="font-family: 'NanumSquareB'">
                     Create Profile
                 </h2>
             </a>
@@ -25,7 +25,6 @@
                     Change Info
                 </p>
             </a>
-
             <a href="{% url 'accountapp:delete' pk=user.pk %}">
                 <p>
                     Quit
