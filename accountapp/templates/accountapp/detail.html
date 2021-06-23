@@ -6,11 +6,10 @@
             <!-- <p>
                 {{ target_user.date_joined }}   # 가입날짜 및 시간 보여주는 부분
             </p> -->
-            <img src="{{ target_user.profile.image.url }}" alt=""
-                 style="height: 12rme; width: 12rem; border-radius: 20rem; margin-bottom: 2rem;">
+            <img src="{{ target_user.profile.image.url }}" alt="" style="height: 12rme; width: 12rem; border-radius: 20rem; margin-bottom: 2rem;">
 
             {% if target_user.profile %}
-            <h2 style="font-family: 'NanumSquareB">
+            <h2 style="font-family: 'NanumSquareB'">
                 {{ target_user.profile.nickname }}
                 <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
                     edit
