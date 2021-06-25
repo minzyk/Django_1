@@ -6,7 +6,9 @@
             Photomatic
         </h1>
         <div class="photomatic_header_button">
-            <span>nav1</span>
+            <a href="{% url 'articleapp:list' %}">
+                <span>Articles</span>
+            </a>
             <span>nav2</span>
             <span>nav3</span>
             {% if not user.is_authenticated %}  <!-- Login이 되어있지 않을경우 login 페이지로 이동 -->
