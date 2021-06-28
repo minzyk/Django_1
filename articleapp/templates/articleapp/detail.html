@@ -18,6 +18,14 @@
                 {{ target_article.content }}
             </p>
 
+            <a href="{% url 'articleapp:update' pk=target_article.pk %}">
+                <p>Update Article</p>
+            </a>
+
+            <a href="{% url 'articleapp:delete' pk=target_article.pk %}">
+                <p>Delete Article</p>
+            </a>
+
         </div>
     </div>
 
