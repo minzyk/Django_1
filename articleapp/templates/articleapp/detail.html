@@ -11,21 +11,25 @@
             <h1>
                 {{ target_article.title }}
             </h1>
-
-            <img src="{{ target_article.image.url }}" alt="">
-
+            <h6>
+                {{ target_article.writer.profile.nickname }}
+            </h6>
+            <hr>
+            <img style="width: 100%; border-radius: 1rem;"
+                 src="{{ target_article.image.url }}" alt="">
             <p>
                 {{ target_article.content }}
             </p>
 
-            <a href="{% url 'articleapp:update' pk=target_article.pk %}">
+            {% if target_article.writer == user %}  <!-- user가 같을경우 글 수정, 삭제 가능 -->
+            <a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn btn-dark rounded-pill col-3">
                 <p>Update Article</p>
             </a>
-
-            <a href="{% url 'articleapp:delete' pk=target_article.pk %}">
+            <a href="{% url 'articleapp:delete' pk=target_article.pk %}" class="btn btn-dark rounded-pill col-3">
                 <p>Delete Article</p>
             </a>
-
+            {% endif %}
+            <hr>
         </div>
     </div>
 
