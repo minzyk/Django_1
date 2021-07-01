@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'accountapp',  # 210601 11:05 added
     'profileapp',  # 210621 15:00 added
     'articleapp',  # 210624 09:45 added
+    'commentapp',  # 210629 15:55 added
 ]
 
 MIDDLEWARE = [

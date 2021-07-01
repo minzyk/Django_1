@@ -23,4 +23,5 @@ urlpatterns = [
     path('accounts/', include('accountapp.urls')),  # 210601 11:08 added + import include
     path('profiles/', include('profileapp.urls')),  # 210621 16:30 added + import include
     path('articles/', include('articleapp.urls')),  # 210624 09:45 added + import include
+    path('comments/', include('commentapp.urls')),  # 210624 09:45 added + import include
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
